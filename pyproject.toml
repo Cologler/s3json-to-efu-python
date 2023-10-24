@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "s3json-to-efu"
+version = "0.1.0"
+description = ""
+authors = ["Cologler <skyoflw@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "s3json_to_efu" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+typer = { extras = ["all"], version = "^0.9.0" }
+
+[tool.poetry.scripts]
+s3json-to-efu = "s3json_to_efu.cli:app"
+
+[tool.poetry-dynamic-versioning]
+enable = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
