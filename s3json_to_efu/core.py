@@ -8,7 +8,6 @@
 import collections
 import csv
 import datetime
-import json
 
 from .filetime import from_datetime
 
