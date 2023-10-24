@@ -32,7 +32,7 @@ def main(
         json_content = json.loads(source.read_text())
 
     if prefix is None:
-        if source is None or output is None:
+        if source is None and output is None:
             typer.echo('No prefix specified.', err=True)
             raise typer.Exit(2)
         prefix = (source or output).stem
